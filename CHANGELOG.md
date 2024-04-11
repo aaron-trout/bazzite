@@ -1,5 +1,46 @@
 # Changelog
 
+## [2.5.0](https://github.com/ublue-os/bazzite/compare/v2.4.0...v2.5.0) (2024-04-11)
+
+
+### Features
+
+* Add auto-vram kargs for Legion GO and ASUS Ally ([d8f450c](https://github.com/ublue-os/bazzite/commit/d8f450c4dc6bf0c0345826291a9c801f775a8a90))
+* Add copr helper ([036687d](https://github.com/ublue-os/bazzite/commit/036687d43f5f947e346ee127fb26ef73e6422b5d))
+* Add ISO torrents via archive.org, huge thanks to [@qoijjj](https://github.com/qoijjj) for all the work on this ([#933](https://github.com/ublue-os/bazzite/issues/933)) ([022bf16](https://github.com/ublue-os/bazzite/commit/022bf16b7da14001060b8de1e393ce8929a0a665))
+* Add setroubleshoot by default, with alerts disabled ([748e7d9](https://github.com/ublue-os/bazzite/commit/748e7d9f25339cce586dcc090c6ae903879cb361))
+* Add support for midi in Lutris ([4707bc4](https://github.com/ublue-os/bazzite/commit/4707bc4a15661c0b9853050708faf2da54f05a0d))
+* Add udica for generating SELinux policies for containers ([b18c31b](https://github.com/ublue-os/bazzite/commit/b18c31b44a35006b0308e68ae090919bd557716f))
+* Add wl-clipboard ([adc2f11](https://github.com/ublue-os/bazzite/commit/adc2f1154d516de9dd7ca59e77fd9766d1218459))
+* **deck:** add tdpfix for cards that has 15W TDP on boot due to writable sysfs on boot ([#892](https://github.com/ublue-os/bazzite/issues/892)) ([0bbd9a5](https://github.com/ublue-os/bazzite/commit/0bbd9a53d9fe0247d6c96a2c5f0728fbdba3d8a5))
+* **just:** add warning message for looking-glass shm creation. ([1700ea7](https://github.com/ublue-os/bazzite/commit/1700ea7ab320cc10f516a005e1a942d757d64bfc))
+* **just:** Enable virtualization for deck hardware ([#895](https://github.com/ublue-os/bazzite/issues/895)) ([2139735](https://github.com/ublue-os/bazzite/commit/21397351e7267fcc58731a698b7b19747034ed4c))
+* **just:** update recipe to edit tuned default profile using ppd.conf ([#907](https://github.com/ublue-os/bazzite/issues/907)) ([eed757d](https://github.com/ublue-os/bazzite/commit/eed757d5004b6c2892d64ec2d391648436ec0193))
+* Switch yafti to use the new Solaar flatpak ([c0c616b](https://github.com/ublue-os/bazzite/commit/c0c616b232898590551e1236b518b9c3d7811eba))
+* update image label with actual kernel version ([#924](https://github.com/ublue-os/bazzite/issues/924)) ([2bbdf25](https://github.com/ublue-os/bazzite/commit/2bbdf25f2aa10bbfdb21c7d7d4dd708cae415a1a))
+* Use new https://github.com/ublue-os/hwe Nvidia install script ([a692a2f](https://github.com/ublue-os/bazzite/commit/a692a2faa08de3a586a9a998792eb9753ab9d643))
+
+
+### Bug Fixes
+
+* Add lsb_release package for EmuDeck ([2c8bfc3](https://github.com/ublue-os/bazzite/commit/2c8bfc371b6a5e93364a5680ca6d6333b4d0b6fd))
+* Add missing sqlite package for duperemove, fixes [#959](https://github.com/ublue-os/bazzite/issues/959) ([4707bc4](https://github.com/ublue-os/bazzite/commit/4707bc4a15661c0b9853050708faf2da54f05a0d))
+* Correct issue with hhd being enabled on root, add HHD adjustor package. ([929cee4](https://github.com/ublue-os/bazzite/commit/929cee487d31ebc400f94485b974748465df9bea))
+* Correct issues with newest version of distrobox ([bae2fae](https://github.com/ublue-os/bazzite/commit/bae2fae95b7adcaf2309f9c98637efac3f51c65d))
+* **deck:** Restore all settings in restore-gnome-de-settings ujust command on deck images ([41483ae](https://github.com/ublue-os/bazzite/commit/41483ae865c1c3500a9d3547b21694be731f20ee))
+* **gamescope:** add 3.13.16.9 backport ([#967](https://github.com/ublue-os/bazzite/issues/967)) ([45a8e4a](https://github.com/ublue-os/bazzite/commit/45a8e4ab6be1c02483b0684fd6cb1e3ee711a5ed))
+* **gnome:** Disable joystickwake on GNOME until lock screen issue can be triaged and fixed. ([57f144f](https://github.com/ublue-os/bazzite/commit/57f144fd858cbccd9aabbece2d65ed1c6e0a78c6))
+* **gnome:** Restore joystickwake functionality with caffeine extension ([3e0b130](https://github.com/ublue-os/bazzite/commit/3e0b13014a71af7bc36ad1f03c7a67eb0556f469))
+* **gnome:** Restore joystickwake with another command to prevent unlock bug (https://gitlab.gnome.org/GNOME/gnome-shell/-/issues/7530) ([3472b9b](https://github.com/ublue-os/bazzite/commit/3472b9bd8d557805d219dda39d21c848a46c87df))
+* Install firmware on all images, allows desktop images to be used on some handhelds (with caveats) ([969202e](https://github.com/ublue-os/bazzite/commit/969202e4c48caabb42bd04ba3e46b0c7909b21b1))
+* **kde:** Update gtk4 package for Ptyxis ([0109f9a](https://github.com/ublue-os/bazzite/commit/0109f9af67b89fe7535bbc01267654d58b3d88b1))
+* Pull in s76 scheduler fixes from fruitchewy ([b60b1e6](https://github.com/ublue-os/bazzite/commit/b60b1e621fb643c4ea59a8254ca5bc0250637367))
+* Remove unneeded file checks from hardware setup ([7133fc7](https://github.com/ublue-os/bazzite/commit/7133fc773a5c600290d6f9f492a638a23b851cb2))
+* Remove unneeded secure boot message ([7a3a9c1](https://github.com/ublue-os/bazzite/commit/7a3a9c13627bba4ba2fb5cc1f9bb48817486ba97))
+* Use balanced-no-pstate profile on CPUs that don't support a pstate governor. ([5e04d6b](https://github.com/ublue-os/bazzite/commit/5e04d6b731edf53a0419cf677a1f4a335dbf2111))
+* Use Ptyxis from ublue-os/staging copr ([a1d47b0](https://github.com/ublue-os/bazzite/commit/a1d47b006c6cdeaa8edd5c4083c7da9519a47eb6))
+* Use xone driver as canary for secure boot check ([4691307](https://github.com/ublue-os/bazzite/commit/46913077868cdc16defbf151645af407b8e6b15d))
+
 ## [2.4.0](https://github.com/ublue-os/bazzite/compare/v2.3.0...v2.4.0) (2024-03-14)
 
 
