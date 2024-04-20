@@ -78,6 +78,7 @@ BuildRequires:  meson >= 1.3.0
 BuildRequires:  gcc
 BuildRequires:  gcc-c++
 BuildRequires:  gettext
+BuildRequires:  python3-pycparser >= 2.20
 %if 0%{?with_hardware}
 BuildRequires:  kernel-headers
 %endif
