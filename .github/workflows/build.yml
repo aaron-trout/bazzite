@@ -1,7 +1,7 @@
 name: Build Bazzite
 on:
-  schedule:
-    - cron: '40 16 * * 2,5' # 16:40 utc tues thurs
+  # schedule:
+  #   - cron: '40 16 * * 2,5' # 16:40 utc tues thurs
   pull_request:
     branches:
       - testing
@@ -47,9 +47,12 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        base_image_flavor: [main, asus]
-        base_name: [bazzite, bazzite-deck, bazzite-nvidia]
-        base_image_name: [kinoite, silverblue]
+        # base_image_flavor: [main, asus]
+        # base_name: [bazzite, bazzite-deck, bazzite-nvidia]
+        # base_image_name: [kinoite, silverblue]
+        base_image_flavor: [main]
+        base_name: [bazzite]
+        base_image_name: [silverblue]
         major_version: [40]
         include:
           - major_version: 40
@@ -267,11 +270,11 @@ jobs:
         run: |
           echo "${{ toJSON(steps.push.outputs) }}"
 
-  build_iso:
-    name: build iso
-    needs: [push-ghcr]
-    if: github.ref_name == 'testing'
-    # Eventually would be nice for building images in PRs
-    #if: ${{ endsWith(github.event.pull_request.title, '[ISO]') }}
-    uses: ./.github/workflows/build_iso.yml
-    secrets: inherit
+  # build_iso:
+  #   name: build iso
+  #   needs: [push-ghcr]
+  #   if: github.ref_name == 'testing'
+  #   # Eventually would be nice for building images in PRs
+  #   #if: ${{ endsWith(github.event.pull_request.title, '[ISO]') }}
+  #   uses: ./.github/workflows/build_iso.yml
+  #   secrets: inherit
