@@ -58,7 +58,7 @@
 %bcond_with valgrind
 %endif
 
-%global vulkan_drivers swrast%{?base_vulkan}%{?intel_platform_vulkan}%{?extra_platform_vulkan}%{?with_nvk:,nouveau-experimental}
+%global vulkan_drivers swrast%{?base_vulkan}%{?intel_platform_vulkan}%{?extra_platform_vulkan}%{?with_nvk:,nouveau}
 
 Name:           mesa
 Summary:        Mesa graphics libraries
