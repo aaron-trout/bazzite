@@ -74,15 +74,6 @@ Source0:        https://gitlab.freedesktop.org/mesa/mesa/-/archive/main/mesa-mai
 # Fedora opts to ignore the optional part of clause 2 and treat that code as 2 clause BSD.
 Source1:        Mesa-MLAA-License-Clarification-Email.txt
 
-Patch10:        gnome-shell-glthread-disable.patch
-# Backport of https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/28740
-# to fix rendering issues using GTK's GSK_RENDERER=ngl on Raspberry Pi:
-# https://bugzilla.redhat.com/show_bug.cgi?id=2269412
-Patch11:        0001-broadcom-compiler-needs_quad_helper_invocation-enabl.patch
-
-# https://gitlab.com/evlaV/mesa/
-Patch21:        valve.patch
-
 BuildRequires:  meson >= 1.3.0
 BuildRequires:  gcc
 BuildRequires:  gcc-c++
