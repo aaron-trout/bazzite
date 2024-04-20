@@ -224,14 +224,6 @@ RUN rpm-ostree override remove \
     rpm-ostree override replace \
     --experimental \
     --from repo=copr:copr.fedorainfracloud.org:kylegospo:bazzite-multilib \
-        mesa-filesystem \
-        mesa-libxatracker \
-        mesa-libglapi \
-        mesa-dri-drivers \
-        mesa-libgbm \
-        mesa-libEGL \
-        mesa-vulkan-drivers \
-        mesa-libGL \
         bluez \
         bluez-cups \
         bluez-libs \
@@ -244,6 +236,17 @@ RUN rpm-ostree override remove \
         pipewire-libs \
         pipewire-pulseaudio \
         pipewire-utils && \
+    rpm-ostree override replace \
+    --experimental \
+    --from repo=copr:copr.fedorainfracloud.org:trouter:bazzite-multilib \
+        mesa-filesystem \
+        mesa-libxatracker \
+        mesa-libglapi \
+        mesa-dri-drivers \
+        mesa-libgbm \
+        mesa-libEGL \
+        mesa-vulkan-drivers \
+        mesa-libGL && \
     rpm-ostree install \
         mesa-va-drivers-freeworld \
         mesa-vdpau-drivers-freeworld.x86_64 && \
