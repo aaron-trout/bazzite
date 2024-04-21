@@ -79,6 +79,7 @@ BuildRequires:  gcc
 BuildRequires:  gcc-c++
 BuildRequires:  gettext
 BuildRequires:  python3-pycparser >= 2.20
+BuildRequires:  rust-cbindgen >= 0.26.0
 %if 0%{?with_hardware}
 BuildRequires:  kernel-headers
 %endif
