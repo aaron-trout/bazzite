@@ -555,6 +555,10 @@ popd
 %{_libdir}/dri/kms_swrast_dri.so
 %{_libdir}/dri/swrast_dri.so
 %{_libdir}/dri/virtio_gpu_dri.so
+%{_libdir}/dri/panthor_dri.so
+%{_libdir}/dri/rzg2l-du_dri.so
+%{_libdir}/dri/ssd130x_dri.so
+%{_libdir}/dri/zynqmp-dpsub_dri.so
 
 %if 0%{?with_hardware}
 %if 0%{?with_r300}
