@@ -390,6 +390,9 @@ export MESON_PACKAGE_CACHE_DIR="%{cargo_registry}/"
 %define _lto_cflags %{nil}
 
 %meson \
+%ifnarch x86_64
+  -Dintel-rt=disabled \
+%endif
   -Dplatforms=x11,wayland \
   -Ddri3=enabled \
   -Dosmesa=true \
@@ -435,9 +438,6 @@ export MESON_PACKAGE_CACHE_DIR="%{cargo_registry}/"
   -Dandroid-libbacktrace=disabled \
 %ifarch %{ix86}
   -Dglx-read-only-text=true
-%endif
-%ifnarch x86_64
-  -Dintel-rt=disabled
 %endif
   %{nil}
 %meson_build
