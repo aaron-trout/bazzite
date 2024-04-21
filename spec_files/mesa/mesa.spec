@@ -79,7 +79,7 @@ BuildRequires:  gcc
 BuildRequires:  gcc-c++
 BuildRequires:  gettext
 BuildRequires:  python3-pycparser >= 2.20
-BuildRequires:  rust-cbindgen >= 0.26.0
+BuildRequires:  cbindgen >= 0.26.0
 %if 0%{?with_hardware}
 BuildRequires:  kernel-headers
 %endif
@@ -95,7 +95,7 @@ BuildRequires:  pkgconfig(zlib) >= 1.2.3
 BuildRequires:  pkgconfig(libzstd)
 BuildRequires:  pkgconfig(libselinux)
 BuildRequires:  pkgconfig(wayland-scanner)
-BuildRequires:  pkgconfig(wayland-protocols) >= 1.8
+BuildRequires:  pkgconfig(wayland-protocols) >= 1.34
 BuildRequires:  pkgconfig(wayland-client) >= 1.11
 BuildRequires:  pkgconfig(wayland-server) >= 1.11
 BuildRequires:  pkgconfig(wayland-egl-backend) >= 3
