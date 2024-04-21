@@ -436,6 +436,9 @@ export MESON_PACKAGE_CACHE_DIR="%{cargo_registry}/"
 %ifarch %{ix86}
   -Dglx-read-only-text=true
 %endif
+%ifnarch x86_64
+  -Dintel-rt=disabled
+%endif
   %{nil}
 %meson_build
 
